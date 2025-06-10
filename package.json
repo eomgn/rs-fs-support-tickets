@@ -1,0 +1,11 @@
+{
+  "name": "projeto-suporte-tickets",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js"
+  },
+  "author": "Matheus Gabriel",
+  "license": "ISC",
+  "description": "API de gerenciamento de tickets para suporte"
+}
