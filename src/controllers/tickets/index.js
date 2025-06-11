@@ -9,9 +9,11 @@ let route = "tickets";
 
 export function index({ request, response, database }) {
   const { status } = request.query; // desestruturação, capturando o nome do parametro passado
-  console.log(status);
+  // console.log(status);
 
-  let select = database.select(route);
+  const filters = status ? { status } : null;
+
+  let select = database.select(route, filters);
 
   return response.writeHead(200).end(JSON.stringify(select));
 }
