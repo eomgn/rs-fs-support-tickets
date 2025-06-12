@@ -14,10 +14,13 @@ export function routeHandler(request, response) {
     // console.log(routeParams); // verificando os parametros passandos para a rota
 
     // capturando os grupos de paramtros passados na rota
-    const { query } = routeParams.groups;
+    const { query, ...params } = routeParams.groups;
     // console.log(extractQueryParams(query));
 
     request.query = query ? extractQueryParams(query) : {}; // criando um novo 'metodo' em request
+
+    // criando o params em request e então passando todos os parametros restantes para a variavel desestruturada
+    request.params = params;
 
     return route.controller({ request, response, database });
   }

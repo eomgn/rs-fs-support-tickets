@@ -42,4 +42,22 @@ export class Database {
 
     return data;
   }
+
+  update(table, id, data) {
+    //o uso do método findIndex para encontrar o registro desejado
+    const rowIndex = this.#database[table].findIndex((row) => {
+      return row.id === id;
+    });
+    // console.log(rowIndex);
+
+    if (rowIndex > -1) {
+      // sobrescrever propriedades existentes
+      this.#database[table][rowIndex] = {
+        ...this.#database[table][rowIndex],
+        ...data,
+      };
+    }
+
+    this.#persist(); // para salvar no banco de dados
+  }
 }
