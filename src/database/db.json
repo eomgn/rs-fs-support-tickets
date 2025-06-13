@@ -17,6 +17,16 @@
       "status": "closed",
       "created_at": "2025-06-13T17:23:06.702Z",
       "udpated_at": "2025-06-13T17:23:06.702Z"
+    },
+    {
+      "id": "0ce34d5f-f740-4da2-b1a9-e094ee38ee36",
+      "equipament": "mouse",
+      "description": "scroll ruim",
+      "user_name": "matheus",
+      "status": "closed",
+      "created_at": "2025-06-13T17:27:36.604Z",
+      "udpated_at": "2025-06-13T17:27:36.604Z",
+      "solution": "equipamento trocado"
     }
   ]
 }
