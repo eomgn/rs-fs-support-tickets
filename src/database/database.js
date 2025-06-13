@@ -60,4 +60,17 @@ export class Database {
 
     this.#persist(); // para salvar no banco de dados
   }
+
+  remove(table, id) {
+    const rowIndex = this.#database[table].findIndex((row) => {
+      return row.id === id;
+    });
+
+    if (rowIndex > -1) {
+      //splice para remover a linha a partir do rowIndex e a quantidade, no caso 1
+      this.#database[table].splice(rowIndex, 1);
+    }
+
+    this.#persist(); // para salvar no banco de dados
+  }
 }
