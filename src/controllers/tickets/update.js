@@ -13,5 +13,6 @@ export function updtate({ request, response, database }) {
     description,
     udpated_at: new Date(),
   });
+
   response.end(equipament);
 }

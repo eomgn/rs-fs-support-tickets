@@ -53,8 +53,8 @@ export class Database {
     if (rowIndex > -1) {
       // sobrescrever propriedades existentes
       this.#database[table][rowIndex] = {
-        ...this.#database[table][rowIndex],
-        ...data,
+        ...this.#database[table][rowIndex], // despeja os dados ja existentes
+        ...data, // sobrescreve
       };
     }
 
